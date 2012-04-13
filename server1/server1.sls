@@ -5,19 +5,13 @@ server1-packages:
     - names:
       - git
       - screen
-      - rubygems
       - vim-enhanced
+      - createrepo
+      - rpmdevtools
       - gitweb
       - epel-release
       - salt-master
       - salt-minion
-
-rpm-packages:
-  pkg:
-    - installed
-    - names:
-      - createrepo
-      - rpmdevtools
 
 httpd:
   pkg:
