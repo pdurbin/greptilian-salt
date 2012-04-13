@@ -97,3 +97,10 @@ httpd:
     - mode: 444
     - user: root
     - group: root
+
+/var/lib/git:
+  file:
+    - directory
+    - user: pdurbin
+    - group: root
+    - mode: 755
