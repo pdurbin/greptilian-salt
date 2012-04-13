@@ -26,6 +26,13 @@ httpd:
     - running
     - require:
       - pkg: httpd
+
+iptables:
+  service:
+    - running
+    - watch:
+      - file: /etc/sysconfig/iptables
+
 /etc/sysconfig/iptables:
   file:
     - managed
