@@ -29,11 +29,41 @@ mysqld:
   service:
     - enabled
 
+php-packages:
+  pkg:
+    - installed
+    - names:
+      - php
+      - php-mysql
+      - php-pdo
+      - php-gd
+
+# http://docs.puppetlabs.com/references/2.7.0/type.html#selboolean
+# http://narrabilis.com/node/49
+# [root@server1 ~]# getsebool httpd_can_sendmail
+# httpd_can_sendmail --> off
+# [root@server1 ~]# setsebool -P httpd_can_sendmail=on
+# [root@server1 ~]# getsebool httpd_can_sendmail
+# httpd_can_sendmail --> on
+# [root@server1 ~]# 
+
 iptables:
   service:
     - running
     - watch:
       - file: /etc/sysconfig/iptables
+
+/var/www/thinkup/data:
+  file:
+    - directory
+    - user: apache
+    - recurse:
+      - user
+
+/var/www/thinkup/config.inc.php:
+  file:
+    - managed
+    - user: apache
 
 /etc/sysconfig/iptables:
   file:
@@ -47,6 +77,14 @@ iptables:
   file:
     - managed
     - source: salt://server1/etc/gitweb.conf
+    - mode: 444
+    - user: root
+    - group: root
+
+/etc/httpd/conf.d/thinkup.greptilian.com.conf:
+  file:
+    - managed
+    - source: salt://server1/etc/httpd/conf.d/thinkup.greptilian.com.conf
     - mode: 444
     - user: root
     - group: root
