@@ -14,6 +14,9 @@ server1-packages:
       - salt-minion
       - perl-libwww-perl
       - perl-JSON
+      - ikiwiki
+      - perl-YAML-LibYAML
+      - gcc
 
 httpd:
   pkg:
@@ -83,6 +86,14 @@ iptables:
     - user: root
     - group: root
 
+/etc/httpd/conf.d/wiki.greptilian.com.conf:
+  file:
+    - managed
+    - source: salt://server1/etc/httpd/conf.d/wiki.greptilian.com.conf
+    - mode: 444
+    - user: root
+    - group: root
+
 /etc/httpd/conf.d/thinkup.greptilian.com.conf:
   file:
     - managed
@@ -148,6 +159,13 @@ iptables:
     - group: root
 
 /var/lib/git:
+  file:
+    - directory
+    - user: pdurbin
+    - group: root
+    - mode: 755
+
+/var/www/wiki:
   file:
     - directory
     - user: pdurbin
