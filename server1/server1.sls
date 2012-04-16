@@ -17,9 +17,17 @@ httpd:
   pkg:
     - installed
   service:
-    - running
+    - enabled
     - require:
       - pkg: httpd
+
+mysql-server:
+  pkg:
+    - installed
+
+mysqld:
+  service:
+    - enabled
 
 iptables:
   service:
