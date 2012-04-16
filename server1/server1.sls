@@ -12,6 +12,8 @@ server1-packages:
       - epel-release
       - salt-master
       - salt-minion
+      - perl-libwww-perl
+      - perl-JSON
 
 httpd:
   pkg:
