@@ -6,6 +6,7 @@ server1-packages:
       - git
       - screen
       - vim-enhanced
+      - mutt
       - createrepo
       - rpmdevtools
       - gitweb
@@ -17,6 +18,12 @@ server1-packages:
       - ikiwiki
       - perl-YAML-LibYAML
       - gcc
+
+denyhosts:
+  pkg:
+    - installed
+  service:
+    - enabled
 
 httpd:
   pkg:
