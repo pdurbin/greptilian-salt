@@ -1,9 +1,9 @@
-#allhosts-packages:
-#  pkg:
-#    - installed
-#     # http://salt.readthedocs.org/en/latest/ref/states/highstate.html#names-declaration
-#    - names:
-#      - vim-enhanced
+allhosts-packages:
+  pkg:
+    - installed
+     # http://salt.readthedocs.org/en/latest/ref/states/highstate.html#names-declaration
+    - names:
+      - mutt
 
 
 # http://salt.readthedocs.org/en/latest/topics/tutorials/states_pt3.html#using-grains-in-sls-modules
