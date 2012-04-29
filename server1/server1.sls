@@ -93,6 +93,14 @@ iptables:
     - user: root
     - group: root
 
+/etc/httpd/conf.d/git.conf:
+  file:
+    - managed
+    - source: salt://server1/etc/httpd/conf.d/git.conf
+    - mode: 444
+    - user: root
+    - group: root
+
 /etc/httpd/conf.d/wiki.greptilian.com.conf:
   file:
     - managed
