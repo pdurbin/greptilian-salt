@@ -3,3 +3,4 @@ perl-packages:
     - installed
     - names:
       - perl-libwww-perl
+      - perl-Readonly
