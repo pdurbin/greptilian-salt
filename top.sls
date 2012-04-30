@@ -9,3 +9,4 @@ base:
   'beamish.*':
     - desktop
     - dev
+    - perl

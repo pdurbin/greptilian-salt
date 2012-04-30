@@ -1,0 +1,5 @@
+perl-packages:
+  pkg:
+    - installed
+    - names:
+      - perl-libwww-perl
