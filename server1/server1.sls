@@ -109,6 +109,14 @@ iptables:
     - user: root
     - group: root
 
+/etc/httpd/conf.d/data.greptilian.com.conf:
+  file:
+    - managed
+    - source: salt://server1/etc/httpd/conf.d/data.greptilian.com.conf
+    - mode: 444
+    - user: root
+    - group: root
+
 /etc/httpd/conf.d/thinkup.greptilian.com.conf:
   file:
     - managed
