@@ -4,6 +4,7 @@ allhosts-packages:
      # http://salt.readthedocs.org/en/latest/ref/states/highstate.html#names-declaration
     - names:
       - mutt
+      - mlocate
 
 
 # http://salt.readthedocs.org/en/latest/topics/tutorials/states_pt3.html#using-grains-in-sls-modules
