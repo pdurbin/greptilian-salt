@@ -18,6 +18,7 @@ server1-packages:
       - ikiwiki
       - perl-YAML-LibYAML
       - gcc
+      - yum-utils
 
 denyhosts:
   pkg:
