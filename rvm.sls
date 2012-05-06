@@ -7,7 +7,6 @@ rvm-packages:
       - bison
       - bzip2
       - gcc-c++
-      - iconv-devel
       - libffi-devel
       - libtool
       - libyaml-devel
