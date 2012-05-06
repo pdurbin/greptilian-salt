@@ -7,6 +7,7 @@ base:
     - hypervisor
     - dev
     - perl
+    - rvm
   'pdurbinubuntu.*':
     - ubuntu
   'beamish.*':
