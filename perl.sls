@@ -4,3 +4,4 @@ perl-packages:
     - names:
       - perl-libwww-perl
       - perl-Readonly
+      - perl-YAML
