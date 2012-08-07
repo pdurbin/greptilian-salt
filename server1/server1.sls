@@ -134,6 +134,14 @@ iptables:
     - user: root
     - group: root
 
+/etc/httpd/conf.d/munin.conf:
+  file:
+    - managed
+    - source: salt://server1/etc/httpd/conf.d/munin.conf
+    - mode: 444
+    - user: root
+    - group: root
+
 /etc/httpd/conf.d/thinkup.greptilian.com.conf:
   file:
     - managed
