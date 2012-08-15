@@ -5,6 +5,8 @@ dev-packages:
       - git
       - screen
       - strace
+      - ack
+      - elinks
 
 /usr/local/bin/gits:
   file:
