@@ -7,6 +7,7 @@ dev-packages:
       - strace
       - ack
       - elinks
+      - perl-Crypt-SSLeay
 
 /usr/local/bin/gits:
   file:
